@@ -126,7 +126,7 @@ class IndexingMenu:
     
     def exec_indexing (self, ):
         lang = st.session_state['lang']
-        if st.button ({'eng' : 'Indexing Exec',
+        if st.button ({'eng' : 'Indexing Run',
                        'jpn':'Indexing実行'}[lang]):
             res = self.exec_cmd ('quit\n')
             st.session_state['list_candidates'] = None

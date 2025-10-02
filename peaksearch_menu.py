@@ -64,7 +64,7 @@ class PeakSearchMenu:
     def exec_peaksearch (self,):
         lang = st.session_state['lang']
 
-        if st.button ({'eng' : 'Peaksearch Exec',
+        if st.button ({'eng' : 'Peaksearch Run',
                        'jpn':'ピークサーチ実行'}[lang]):
             
             shutil.copyfile (self.param_path, self.param_path_pk)
