@@ -1,0 +1,6 @@
+pandas
+numpy
+matplotlib
+streamlit
+plotly==5.18.0
+lxml
