@@ -108,7 +108,7 @@ class MainMenu:
         hist_file = st.file_uploader(
             {'eng' : 'Upload histogram file',
             'jpn': 'ヒストグラムファイル アップロード'}[lang],
-            type = ['dat', 'histogramIgor', 'histogramigor', 'txt'],
+            #type = ['dat', 'histogramIgor', 'histogramigor', 'txt'],
             key = 'hist')
             
         flg1 = False; flg2 = False
