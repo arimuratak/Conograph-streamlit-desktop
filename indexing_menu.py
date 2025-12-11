@@ -681,7 +681,6 @@ class IndexingMenu:
             sel = sel_dict[sel]
             if sel not in st.session_state['list_candidates']:
                 st.session_state['list_candidates'].append (sel)
-        print (st.session_state['list_candidates'])
 
     def display_log (self,):
         with open (self.log_path, 'r', encoding = 'utf-8') as f:
