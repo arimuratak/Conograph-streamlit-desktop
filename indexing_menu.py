@@ -677,18 +677,11 @@ class IndexingMenu:
             )
 
     def manage_list_candidates (self, sel, sel_dict):
-        nums = list (sel_dict.values())
-
-        list_candidates = st.session_state['list_candidates']
-        selected_num = list_candidates.pop (0)
-
-        list_candidates = [n for n in list_candidates if n not in nums]
-        
         if sel != '-----':
-            list_candidates.append (sel_dict[sel])            
-
-        list_candidates = [selected_num] + list_candidates
-        st.session_state['list_candidates'] = list_candidates
+            sel = sel_dict[sel]
+            if sel not in st.session_state['list_candidates']:
+                st.session_state['list_candidates'].append (sel)
+        print (st.session_state['list_candidates'])
 
     def display_log (self,):
         with open (self.log_path, 'r', encoding = 'utf-8') as f:
